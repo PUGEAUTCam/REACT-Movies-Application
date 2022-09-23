@@ -3,10 +3,10 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-const SearchBar = () => {
-    const [search, setSearch] = useState("")
+const SearchBar = (props) => {
+    const [search, setSearch] = useState('')
     const [data, setData] = useState([]);
+
 
     const getSearch = () => {
         axios
@@ -18,12 +18,13 @@ const SearchBar = () => {
         getSearch()
     }, [search]);
 
+    const handleSelect = (movie) => {
+        window.location.replace(`/movie/?movie=${movie.id}`)
+    }
 
     const formatResult = (item) => {
         return <span style={{ display: 'block', textAlign: 'left' }}>{item.title}</span>
     }
-
-    console.log(data)
 
     return (
         <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px' }}>
@@ -33,16 +34,19 @@ const SearchBar = () => {
                 fuseOptions={{ keys: ["title"] }}
                 onSearch={setSearch}
                 formatResult={formatResult}
+                onSelect={handleSelect}
+                placeholder={"Find a movie for tonight?"}
                 styling={{
                     zIndex: 9999,
                     color: '#177196',
-                    border: `3px solid  #a639b0`,
+                    border: `4px solid #a2d6d7`,
                 }}
             />
+            <h1 style={{ paddingTop: '72', textAlign: 'center' }}>Top rated movies</h1>
         </div>
     );
 };
 
 export default SearchBar;
 
-// Math.trunc(value)
+// Math.trunc(value) popularity

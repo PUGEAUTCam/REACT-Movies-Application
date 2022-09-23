@@ -22,7 +22,6 @@ export const Image = styled.img`
     object-fit: cover;
         
 `
-
 export const Title = styled.h3`
     text-align: center;
     display: flex;
@@ -36,7 +35,7 @@ export const Title = styled.h3`
     font-size: 24px;
     opacity: 0;
     transition: transform 200ms;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 
         &:hover {
             opacity: 1;
@@ -48,6 +47,22 @@ export const Title = styled.h3`
 export const Link = styled.a`
     cursor: pointer;
 `;
+
+export const PopularityP = styled.p`
+    position: absolute;
+    top: 10px;
+    left: 191px;
+    color: white;
+    border: 2px solid #a8f2f3;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 6px;
+    font-size: 14px;
+    background: linear-gradient(88deg, rgba(168,242,243,1) 10%, rgba(12,12,88,0.6241750776397516) 82%);
+`
 
 
 

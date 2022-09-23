@@ -3,7 +3,7 @@ import Movies from '../../components/movies';
 import SearchBar from '../../components/searchBar';
 import Navigation from '../../components/navigation';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <>
             <Navigation />
