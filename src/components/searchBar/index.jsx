@@ -42,7 +42,6 @@ const SearchBar = (props) => {
                     border: `4px solid #a2d6d7`,
                 }}
             />
-            <h1 style={{ paddingTop: '72', textAlign: 'center' }}>Top rated movies</h1>
         </div>
     );
 };

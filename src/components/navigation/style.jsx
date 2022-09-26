@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const ContainerNavigation = styled.div`
     display: flex;
     justify-content: flex-start;
-    align-items: center;    
+    align-items: center;  
+    padding-bottom: 42px;  
     
 `
 
@@ -17,3 +18,5 @@ export const TitleNavigation = styled.h1`
     color: black;
 
 `
+
+
