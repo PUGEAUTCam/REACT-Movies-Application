@@ -20,7 +20,6 @@ const Movies = (props) => {
 
 
     const getMovies = (isRadio) => {
-        console.log(selectedRadio)
         axios
             .get(`https://api.themoviedb.org/3/movie/${selectedRadio}?api_key=cf0710105c7cebaf3b51cf0e45affb42&page=${page}`)
             .then((res) => {

@@ -27,7 +27,7 @@ const SearchBar = (props) => {
     }
 
     return (
-        <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px' }}>
+        <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px', marginTop: '-60px' }}>
             <ReactSearchAutocomplete
                 maxResults={500}
                 items={data}
@@ -48,4 +48,3 @@ const SearchBar = (props) => {
 
 export default SearchBar;
 
-// Math.trunc(value) popularity
