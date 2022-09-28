@@ -27,7 +27,7 @@ const SearchBar = (props) => {
     }
 
     return (
-        <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px', marginTop: '-60px' }}>
+        <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px', marginTop: '-56px' }}>
             <ReactSearchAutocomplete
                 maxResults={500}
                 items={data}
@@ -38,8 +38,8 @@ const SearchBar = (props) => {
                 placeholder={"Find a movie for tonight?"}
                 styling={{
                     zIndex: 9999,
-                    color: '#177196',
-                    border: `4px solid #a2d6d7`,
+                    color: '#081d25',
+                    border: `4px solid black`,
                 }}
             />
         </div>

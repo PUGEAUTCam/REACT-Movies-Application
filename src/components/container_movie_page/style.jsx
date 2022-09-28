@@ -29,7 +29,7 @@ export const ContainerSynopsis = styled.div`
 export const Tagline = styled.p`
     font-size: 55px;
     text-align: center;
-    font-family: baskerville;
+    font-family: monospace;
     width: 579px;
     margin: 0px auto;
     margin-top: 156px;

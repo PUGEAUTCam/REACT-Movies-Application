@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const LabelRadio = styled.label`
     padding-left: 13px;
-    font-family: 'baskerville';
+    font-family: monospace;
     font-size: 26px;
     font-weight: 500;
 `

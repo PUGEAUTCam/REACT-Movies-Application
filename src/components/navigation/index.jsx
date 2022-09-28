@@ -8,7 +8,6 @@ const Navigation = () => {
         <div style={{ display: 'flex', justifyContent: "space-between", alignItems: 'center' }}>
             <NavLink to='/' style={{ textDecoration: 'none' }}>
                 <ContainerNavigation>
-                    <ImgNavigation src={logo} alt="Camera icon" />
                     <TitleNavigation>Cam'ovies</TitleNavigation>
                 </ContainerNavigation>
             </NavLink>

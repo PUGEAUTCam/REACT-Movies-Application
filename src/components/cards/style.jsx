@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ContainerCover = styled.div`
     width: 236px;
     height: 337px;
-    border-radius: 35px;
     overflow: hidden;
     position: relative; 
     transition: transform 300ms; 
@@ -17,7 +16,6 @@ export const ContainerCover = styled.div`
 `;
 
 export const Image = styled.img`
-    border-radius: 35px;
     width: 100%;
     object-fit: cover;
         
@@ -35,7 +33,7 @@ export const Title = styled.h3`
     font-size: 24px;
     opacity: 0;
     transition: transform 200ms;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 
         &:hover {
             opacity: 1;
@@ -53,7 +51,7 @@ export const PopularityP = styled.p`
     top: 10px;
     left: 191px;
     color: white;
-    border: 2px solid #a8f2f3;
+    border: 2px solid white;
     width: 36px;
     height: 36px;
     border-radius: 18px;
@@ -61,7 +59,7 @@ export const PopularityP = styled.p`
     font-weight: bold;
     padding-top: 6px;
     font-size: 14px;
-    background: linear-gradient(88deg, rgba(168,242,243,1) 10%, rgba(12,12,88,0.6241750776397516) 82%);
+    background-color: black;
 `
 
 
