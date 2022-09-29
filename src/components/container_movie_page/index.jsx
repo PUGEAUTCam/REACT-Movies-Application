@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackdropImg, ContainerSynopsis, ContainerTitle, Tagline } from './style';
+import { BackdropImg, ContainerTitle, SynopsisText, Tagline } from './style';
 
 const ContainerMoviePage = ({ dataMovie }) => {
 
@@ -8,29 +8,22 @@ const ContainerMoviePage = ({ dataMovie }) => {
 
 
 
-
-
     return (
         <div>
-            <ContainerTitle>
-                <img src={imagePoster} alt={dataMovie.title} style={{ borderRadius: 25 }} />
-                <div>
-                    <h1 style={{ fontSize: 40 }}>{dataMovie.title}</h1>
-                </div>
-            </ContainerTitle>
-
-            <ContainerSynopsis>
-                <p> {dataMovie.overview}</p>
-                <p style={{ fontSize: 16 }}> {dataMovie.release_date}</p>
-            </ContainerSynopsis>
-
             <div>
-                <Tagline>{dataMovie.tagline}...</Tagline>
                 <BackdropImg src={imageBackdrop} alt={dataMovie.title} />
+                <Tagline>{dataMovie.tagline}</Tagline>
+
             </div>
 
 
+            <ContainerTitle>
+                <img src={imagePoster} alt={dataMovie.title} style={{ position: 'sticky' }} />
+                <SynopsisText> {dataMovie.overview}</SynopsisText>
+            </ContainerTitle>
+
         </div>
+
     );
 };
 

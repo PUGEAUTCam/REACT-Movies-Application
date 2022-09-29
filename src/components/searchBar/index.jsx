@@ -27,7 +27,7 @@ const SearchBar = (props) => {
     }
 
     return (
-        <div style={{ width: '300px', margin: '0px auto', marginBottom: '52px', marginTop: '-56px' }}>
+        <div style={{ width: '300px' }}>
             <ReactSearchAutocomplete
                 maxResults={500}
                 items={data}
@@ -40,6 +40,7 @@ const SearchBar = (props) => {
                     zIndex: 9999,
                     color: '#081d25',
                     border: `4px solid black`,
+
                 }}
             />
         </div>
