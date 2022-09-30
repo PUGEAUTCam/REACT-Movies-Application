@@ -30,18 +30,44 @@ export const ContainerTitle = styled.div`
         justify-content: center;
         margin-top: 32%;
     }
+`
 
+export const ImgMovie = styled.img`
+    position: sticky;   
+    @media all and (max-width: 1200px){
+        width: 226px;
+    }
 `
 
 export const SynopsisText = styled.p`
     font-size: 22px;
     color: white;
     line-height: 38px;
-    padding: 0px 51px;
+
     text-align: justify;
     @media all and (max-width: 1200px){
-        padding: 36px 51px;
+        padding: 33px 0px;
         font-size: 16px;
     }
-
 `
+//Like
+
+export const ContainerSynopsisTitle = styled.div`
+    padding: 0px 51px;
+    @media all and (max-width: 1200px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+`
+
+export const LikeContainer = styled.div`
+    display: flex;
+    align-items: center;
+    width: 167px;
+    justify-content: space-around;
+    padding: 25px 0px;
+    position: sticky;
+        
+`
+
