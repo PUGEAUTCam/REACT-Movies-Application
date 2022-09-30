@@ -8,7 +8,7 @@ const MoviePage = () => {
     let params = new URLSearchParams(window.location.search);
     const idMovie = params.get('movie');
 
-    const [dataMovie, setDataMovie] = useState([]);
+    const [dataMovie, setDataMovie] = useState(null);
 
 
     useEffect(() => {
@@ -17,6 +17,9 @@ const MoviePage = () => {
             .then((res) => setDataMovie(res.data))
     }, []);
 
+    if (!dataMovie) {
+        return null
+    }
 
     return (
         <div>

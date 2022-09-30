@@ -24,7 +24,7 @@ export const ContainerTitle = styled.div`
     width: 100%;
     display: flex;
     align-items: flex-end;
-    margin-top: 16%;
+    margin-top: 12%;
     @media all and (max-width: 1200px){
         flex-wrap: wrap;
         justify-content: center;

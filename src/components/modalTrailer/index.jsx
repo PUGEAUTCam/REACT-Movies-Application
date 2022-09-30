@@ -1,9 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-// import ModalVideo from 'react-modal-video'
-// import PlayCircleOutlineSharpIcon from '@mui/icons-material/PlayCircleOutlineSharp';
-import { Modal } from 'react-responsive-modal';
+import PlayCircleOutlineSharpIcon from '@mui/icons-material/PlayCircleOutlineSharp';
 import HyperModal from 'react-hyper-modal';
+import { BtnTrailer } from './style';
 
 const ModalTrailer = ({ dataMovie }) => {
 
@@ -15,33 +14,36 @@ const ModalTrailer = ({ dataMovie }) => {
     const onCloseModal = () => setOpen(false);
 
 
-    const [dataTrailer, setDataTrailer] = useState([]);
+    const [dataTrailer, setDataTrailer] = useState(null);
 
     useEffect(() => {
         axios
             .get(`https://api.themoviedb.org/3/movie/${dataMovie.id}/videos?api_key=cf0710105c7cebaf3b51cf0e45affb42&language=en-US`)
-            .then((res) => setDataTrailer(res.data.results[0]))
+            .then((res) => setDataTrailer(res.data.results[1]))
     }, []);
 
-    const movieTrailer = `https://www.themoviedb.org/video/play?key=${dataTrailer.key}&width=557&height=313`
+
+    const movieTrailer = `https://www.themoviedb.org/video/play?key=${dataTrailer?.key}&width=1000&height=500`
 
 
     return (
         <div>
-
             <HyperModal
                 isOpen={open}
                 requestClose={() => setOpen(false)}
             >
-                <iframe id="inlineFrameExample"
-                    title="Inline Frame Example"
-                    width="100%"
-                    height="100%"
+                <iframe
+                    width="100%%"
+                    height="100%%"
                     src={movieTrailer} >
                 </iframe>
 
             </HyperModal>
-            <button onClick={() => setOpen(true)}> X</button>
+            {
+                dataTrailer && <BtnTrailer onClick={() => setOpen(true)}>
+                    <PlayCircleOutlineSharpIcon sx={{ color: 'white', fontSize: '41px', marginTop: '4px' }} />
+                </BtnTrailer>
+            }
         </div>
     );
 };
