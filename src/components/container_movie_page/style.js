@@ -13,7 +13,7 @@ export const Tagline = styled.p`
     font-family: monospace;
     color: white;
     text-align: center;
-    padding-top: 1%;
+    padding-top: 2%;
     @media all and (max-width: 800px){
       font-size: 16px;
     }

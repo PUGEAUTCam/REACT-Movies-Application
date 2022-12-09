@@ -19,11 +19,9 @@ export const ImgNavigation = styled.img`
 
 export const TitleNavigation = styled.h1`
     font-size: 44px;
-    @media all and (max-width: 570px){
-        font-size: 39px;
-    }
-
-
+        @media all and (max-width: 570px){
+            font-size: 39px;
+        }
 `
 
 

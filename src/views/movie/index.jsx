@@ -17,14 +17,15 @@ const MoviePage = () => {
             .then((res) => setDataMovie(res.data))
     }, []);
 
-    if (!dataMovie) {
-        return null
-    }
+    
 
     return (
         <div>
             <Navigation />
-            <ContainerMoviePage dataMovie={dataMovie} />
+            {
+                dataMovie && 
+                    <ContainerMoviePage dataMovie={dataMovie} />
+            }
         </div>
     );
 };

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerCover = styled.div`
     width: 236px;
+    border-radius: 12px;
     overflow: hidden;
     position: relative; 
     transition: transform 300ms; 
@@ -51,8 +52,8 @@ export const Link = styled.a`
 
 export const PopularityP = styled.p`
     position: absolute;
-    top: 6px;
-    right: 2px;
+    top: 7px;
+    right: 10px;
     color: white;
     border: 2px solid white;
     width: 36px;

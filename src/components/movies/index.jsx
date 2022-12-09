@@ -5,8 +5,6 @@ import CoverMovie from '../cards';
 import { Container, LabelRadio, ListRadio } from './style';
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
-
 const Movies = (props) => {
     const [data, setData] = useState([]);
     const [page, setPage] = useState(1);
@@ -17,7 +15,6 @@ const Movies = (props) => {
         { name: 'Popular', id: 'popular' },
         { name: 'Upcoming', id: 'upcoming' },
     ];
-
 
     const getMovies = (isRadio) => {
         axios
@@ -47,6 +44,7 @@ const Movies = (props) => {
         <>
             <ListRadio>
                 {categoriesRadio.map((category, index) => (
+
                     <li key={index} style={{ listStyle: 'none' }}>
                         <input
                             type="radio"
@@ -57,6 +55,7 @@ const Movies = (props) => {
                         />
                         <LabelRadio htmlFor={category.name}>{category.name}</LabelRadio>
                     </li>
+
                 ))}
             </ListRadio>
 
