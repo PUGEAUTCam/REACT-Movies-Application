@@ -7,7 +7,13 @@ import { BtnTrailer } from './style';
 const ModalTrailer = ({ dataMovie }) => {
 
     //Modal trailer
+    // const [isOpen, setOpen] = useState(false)
     const [open, setOpen] = useState(false);
+
+    const onOpenModal = () => setOpen(true);
+    const onCloseModal = () => setOpen(false);
+
+
     const [dataTrailer, setDataTrailer] = useState(null);
 
     useEffect(() => {
@@ -16,7 +22,9 @@ const ModalTrailer = ({ dataMovie }) => {
             .then((res) => setDataTrailer(res.data.results[1]))
     }, []);
 
+
     const movieTrailer = `https://www.themoviedb.org/video/play?key=${dataTrailer?.key}&width=1000&height=500`
+
 
     return (
         <div>
@@ -25,8 +33,8 @@ const ModalTrailer = ({ dataMovie }) => {
                 requestClose={() => setOpen(false)}
             >
                 <iframe
-                    width="100%"
-                    height="100%"
+                    width="100%%"
+                    height="100%%"
                     src={movieTrailer} >
                 </iframe>
 
@@ -41,4 +49,3 @@ const ModalTrailer = ({ dataMovie }) => {
 };
 
 export default ModalTrailer;
-
