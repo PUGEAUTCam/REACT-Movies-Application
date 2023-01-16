@@ -1,5 +1,6 @@
                                                 # CAM'OVIES
                                                 
+Demontration of the site on Youtube: https://youtu.be/YEjrNQ8QsZg. 
 This application allows you to search in a selection of movies. Then take a look at your favorite movie: Synopsis, trailer, rating...
 
 ## Technologies used
